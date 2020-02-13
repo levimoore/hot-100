@@ -5,3 +5,23 @@
 
 @import "tailwindcss/utilities";
 @import "utilities.css";
+
+.homepage-bkg-animated {
+  background: gray url(/images/bg.png) repeat 0 0;
+  width: 100%;
+  -webkit-animation: slide 45s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1200px 0;
+  }
+}
+.russo {
+  font-family: "Russo One", sans-serif;
+  font-size: 96px;
+  text-shadow: 5px 5px 10px black;
+}

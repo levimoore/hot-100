@@ -1,5 +1,16 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<section class="flex h-screen homepage-offset homepage-bkg-animated">
+    <div class="h-full w-full">
+        <div class="flex flex-col items-center justify-center text-center h-full">
+            <div class="flex flex-row items-center">
+                <img src="/images/logo.png" height="100" />
+                <h1 class="font-mono tracking-tight text-white text-6xl russo">Hot 100 🔥</h1>
+            </div>
+            <div>
+                <button
+                    class="bg-yellow-500 hover:bg-yellow-400 text-white font-semibold hover:text-gray-500 py-2 px-4 rounded shadow">
+                    See the Hot 100
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
