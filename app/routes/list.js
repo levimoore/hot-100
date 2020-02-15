@@ -9,10 +9,10 @@ export default class ListRoute extends Route {
   }
   setupController(controller, model) {
     super.setupController(controller, model);
-    console.log("controller", model);
     model.subscribe({
       next: event => {
-        console.log(event);
+        if (event.newVal)
+          return this.controllerFor("list").set("model", event.newVal);
         return this.controllerFor("list").set("model", event);
       }
     });

@@ -10,7 +10,18 @@ export default class NavigationComponent extends Component {
   @action
   searchForAlbum(event) {
     this.searchTerm = event.target.value;
+    if (this.searchTerm === "") this.resetAlbums();
     this.store.searchAlbums(this.searchTerm);
-    console.log(this.searchTerm);
+  }
+
+  @action
+  resetAlbums() {
+    this.searchTerm = null;
+    this.store.resetStore();
+  }
+
+  @action
+  async filterByCategory(category) {
+    this.store.resetStore(category);
   }
 }
