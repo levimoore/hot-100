@@ -20,8 +20,12 @@
     background-position: -1200px 0;
   }
 }
-.russo {
+.homepage_title {
   font-family: "Russo One", sans-serif;
   font-size: 96px;
   text-shadow: 5px 5px 10px black;
+}
+.navigation_title {
+  font-family: "Russo One", sans-serif;
+  text-shadow: 2px 2px 5px black;
 }
