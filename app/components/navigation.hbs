@@ -1,7 +1,9 @@
 <nav class="flex items-center justify-between flex-wrap bg-yellow-500 p-2">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <img src="/images/logoBW.png" height="50" />
-        <span class="font-mono tracking-tight text-white text-xl navigation_title">Hot 100 🔥</span>
+        <LinkTo @route="index" class="flex flex-row items-center">
+            <img src="/images/logoBW.png" height="50" />
+            <span class="font-mono tracking-tight text-white text-xl navigation_title">Hot 100 🔥</span>
+        </LinkTo>
     </div>
     <div class="xl:flex lg:hidden sm:hidden md:hidden">
         <button {{on "click" (fn this.filterByCategory 'Alternative')}}
