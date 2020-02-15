@@ -77,6 +77,12 @@ export default class StoreService extends Service {
       results.forEach(album => {
         searchResults.push(album.obj);
       });
+      searchResults.sort((first, second) => {
+        if (first.rank < second.rank) {
+          return -1;
+        }
+        return 1;
+      });
       currentStore.store.next(searchResults);
     } else {
       currentStore.store.next(albums);
